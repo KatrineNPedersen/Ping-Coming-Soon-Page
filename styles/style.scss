@@ -1,0 +1,242 @@
+//MIXINS
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: $direction;
+}
+
+//Variables
+
+$Blue: hsl(223, 87%, 63%);
+$paleBlue: hsl(223, 100%, 88%);
+$lightRed: hsl(354, 100%, 66%);
+$Gray: hsl(0, 0%, 59%);
+$veryDarkBlue: hsl(209, 33%, 12%);
+
+//OVERALL
+
+body {
+  @include flexCenter(column);
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+  height: 100vh;
+  min-width: 375px;
+  min-height: 650px;
+  margin: 0;
+  padding: 0;
+  .container {
+    @include flexCenter(column);
+    height: 100vh;
+    width: 90vw;
+    justify-content: space-around;
+    header {
+      @include flexCenter(column);
+      justify-content: flex-end;
+      height: 10%;
+      img {
+        height: 20%;
+      }
+    }
+    main {
+      width: 100%;
+      height: 70%;
+      .info {
+        height: 12%;
+        h1 {
+          font-size: 20px;
+          span {
+            color: $Gray;
+            font-weight: 300;
+          }
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+      .notify {
+        @include flexCenter(column);
+        justify-content: flex-start;
+        height: 27%;
+        padding-top: 2%;
+        form {
+          width: 85%;
+          input {
+            width: 100%;
+            border-radius: 50px;
+            height: 30px;
+            outline: none;
+            margin: 0;
+            padding: 5px 0;
+            margin-bottom: 10px;
+            border: 1px solid $paleBlue;
+            text-indent: 10%;
+            font-family: "Libre Franklin", sans-serif;
+            color: rgb(136, 135, 135);
+            font-weight: 500;
+            font-size: 12px;
+            &::placeholder {
+              text-indent: 10%;
+              color: $paleBlue;
+              font-family: "Libre Franklin", sans-serif;
+              font-size: 10px;
+            }
+          }
+          .error {
+            font-size: 10px;
+            margin-top: -5px;
+            padding-bottom: 10px;
+            color: $lightRed;
+          }
+          button {
+            @include flexCenter(column);
+            width: 100%;
+            border-radius: 50px;
+            height: 32px;
+            outline: none;
+            margin: 0;
+            padding: 20px 0;
+            background-color: $Blue;
+            color: white;
+            font-family: "Libre Franklin", sans-serif;
+            font-weight: 600;
+            font-size: 10px;
+            letter-spacing: 1px;
+            border: 1px solid $paleBlue;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 1px;
+            &:hover {
+              opacity: 80%;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+    footer {
+      @include flexCenter(column);
+      font-size: 10px;
+      color: $Gray;
+      .social-media {
+        width: 50%;
+        margin: 0;
+        color: $Blue;
+        padding-bottom: 20px;
+        a {
+          color: $Blue;
+          .fa-brands {
+            border: 2px solid rgb(250, 249, 249);
+            border-radius: 100%;
+            padding: 5px;
+            width: 15px;
+            font-size: 15px;
+            margin: 0 5px;
+            &:hover {
+              color: white;
+              background-color: $Blue;
+            }
+          }
+        }
+      }
+      p {
+        margin: 0px;
+      }
+      .attribution {
+        text-align: center;
+        a {
+          color: hsl(228, 45%, 44%);
+          text-decoration: none;
+          &:hover {
+            color: $lightRed;
+          }
+        }
+      }
+    }
+  }
+}
+
+//JS
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    .container {
+      max-width: 700px;
+      max-height: 1024px;
+      min-height: 850px;
+      header {
+        height: 10%;
+        img {
+          height: 22%;
+        }
+      }
+      main {
+        @include flexCenter(column);
+        justify-content: space-between;
+        max-height: 717px;
+        .info {
+          height: 15%;
+
+          h1 {
+            font-size: 45px;
+            margin: 0;
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+        .notify {
+          width: 100%;
+          height: 140px;
+          padding: 0;
+          margin-top: 20px;
+          min-height: 140px;
+          form {
+            @include flexCenter(row);
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            width: 90%;
+            height: 100%;
+            input {
+              width: 65%;
+              margin: 0;
+              height: 29%;
+              font-size: 15px;
+              &::placeholder {
+                font-size: 15px;
+              }
+            }
+            button {
+              width: 32%;
+              height: 40%;
+              font-size: 13px;
+            }
+            .error {
+              position: absolute;
+              top: 45%;
+              left: 7%;
+              font-size: 11px;
+            }
+          }
+        }
+        img {
+          width: 90%;
+          margin-bottom: 10%;
+        }
+      }
+    }
+    footer {
+      p {
+        padding-bottom: 5px;
+      }
+    }
+  }
+}

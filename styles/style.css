@@ -1,0 +1,258 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+  height: 100vh;
+  min-width: 375px;
+  min-height: 650px;
+  margin: 0;
+  padding: 0;
+}
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 90vw;
+  max-width: 375px;
+  min-height: 650px;
+  justify-content: space-around;
+}
+body .container header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 10%;
+}
+body .container header img {
+  height: 20%;
+}
+body .container main {
+  width: 100%;
+  height: 70%;
+}
+body .container main .info {
+  height: 12%;
+}
+body .container main .info h1 {
+  font-size: 20px;
+}
+body .container main .info h1 span {
+  color: hsl(0, 0%, 59%);
+  font-weight: 300;
+}
+body .container main .info p {
+  font-size: 13px;
+}
+body .container main .notify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 27%;
+  padding-top: 2%;
+}
+body .container main .notify form {
+  width: 85%;
+}
+body .container main .notify form input {
+  width: 100%;
+  border-radius: 50px;
+  height: 30px;
+  outline: none;
+  margin: 0;
+  padding: 5px 0;
+  margin-bottom: 10px;
+  border: 1px solid hsl(223, 100%, 88%);
+  text-indent: 10%;
+  font-family: "Libre Franklin", sans-serif;
+  color: rgb(136, 135, 135);
+  font-weight: 500;
+  font-size: 12px;
+}
+body .container main .notify form input::-moz-placeholder {
+  text-indent: 10%;
+  color: hsl(223, 100%, 88%);
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 10px;
+}
+body .container main .notify form input::placeholder {
+  text-indent: 10%;
+  color: hsl(223, 100%, 88%);
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 10px;
+}
+body .container main .notify form .error {
+  font-size: 10px;
+  margin-top: -5px;
+  padding-bottom: 10px;
+  color: hsl(354, 100%, 66%);
+}
+body .container main .notify form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 50px;
+  height: 32px;
+  outline: none;
+  margin: 0;
+  padding: 20px 0;
+  background-color: hsl(223, 87%, 63%);
+  color: white;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 1px;
+  border: 1px solid hsl(223, 100%, 88%);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 1px;
+}
+body .container main .notify form button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+body .container main img {
+  width: 100%;
+}
+body .container footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-size: 10px;
+  color: hsl(0, 0%, 59%);
+}
+body .container footer .social-media {
+  width: 50%;
+  margin: 0;
+  color: hsl(223, 87%, 63%);
+  padding-bottom: 20px;
+}
+body .container footer .social-media a {
+  color: hsl(223, 87%, 63%);
+}
+body .container footer .social-media a .fa-brands {
+  border: 2px solid rgb(250, 249, 249);
+  border-radius: 100%;
+  padding: 5px;
+  width: 15px;
+  font-size: 15px;
+  margin: 0 5px;
+}
+body .container footer .social-media a .fa-brands:hover {
+  color: white;
+  background-color: hsl(223, 87%, 63%);
+}
+body .container footer p {
+  margin: 0px;
+}
+body .container footer .attribution {
+  text-align: center;
+}
+body .container footer .attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+body .container footer .attribution a:hover {
+  color: hsl(354, 100%, 66%);
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  body .container {
+    max-width: 700px;
+    max-height: 1024px;
+    min-height: 850px;
+  }
+  body .container header {
+    height: 10%;
+  }
+  body .container header img {
+    height: 22%;
+  }
+  body .container main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 717px;
+  }
+  body .container main .info {
+    height: 15%;
+  }
+  body .container main .info h1 {
+    font-size: 45px;
+    margin: 0;
+  }
+  body .container main .info p {
+    font-size: 18px;
+  }
+  body .container main .notify {
+    width: 100%;
+    height: 140px;
+    padding: 0;
+    margin-top: 20px;
+    min-height: 140px;
+  }
+  body .container main .notify form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    width: 90%;
+    height: 100%;
+  }
+  body .container main .notify form input {
+    width: 65%;
+    margin: 0;
+    height: 29%;
+    font-size: 15px;
+  }
+  body .container main .notify form input::-moz-placeholder {
+    font-size: 15px;
+  }
+  body .container main .notify form input::placeholder {
+    font-size: 15px;
+  }
+  body .container main .notify form button {
+    width: 32%;
+    height: 40%;
+    font-size: 13px;
+  }
+  body .container main .notify form .error {
+    position: absolute;
+    top: 45%;
+    left: 7%;
+    font-size: 11px;
+  }
+  body .container main img {
+    width: 90%;
+    margin-bottom: 10%;
+  }
+  body footer p {
+    padding-bottom: 5px;
+  }
+}/*# sourceMappingURL=style.css.map */
